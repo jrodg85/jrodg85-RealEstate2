@@ -42,7 +42,7 @@ public abstract class Oferta {
 	}
 
 	public void setSuperficieVivienda() {
-		this.superficieVivienda = superficieVivienda();
+		this.superficieVivienda = getVivienda().getSuperficie();
 	}
 
 	// contructores
@@ -52,7 +52,7 @@ public abstract class Oferta {
 
 	public Oferta(String tituloOferta) {
 		this.tituloOferta = tituloOferta;
-		this.superficieVivienda = superficieVivienda();
+		this.superficieVivienda = getVivienda().getSuperficie();
 	}
 
 	public double superficieVivienda() {
