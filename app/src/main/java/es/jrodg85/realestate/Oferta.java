@@ -2,37 +2,69 @@ package es.jrodg85.realestate;
 
 public abstract class Oferta {
 
-  // atributos
+	// atributos
 
-  private long idOferta;
-  private String tituloOferta;
+	private Vivienda vivienda;
+	private long idOferta;
+	private String tituloOferta;
+	private double superficieVivienda;
 
-  // getters
+	// getters
 
-  public long getIdOferta() {
-    return idOferta;
-  }
+	public Vivienda getVivienda() {
+		return vivienda;
+	}
 
-  public String getTituloOferta() {
-    return tituloOferta;
-  }
+	public long getIdOferta() {
+		return idOferta;
+	}
 
-  // setters
+	public String getTituloOferta() {
+		return tituloOferta;
+	}
 
-  public void setIdOferta(long idOferta) {
-    this.idOferta = idOferta;
-  }
+	public double getSuperficieVivienda() {
+		return superficieVivienda;
+	}
 
-  public void setTituloOferta(String tituloOferta) {
-    this.tituloOferta = tituloOferta;
-  }
+	// setters
 
-  // contructores
+	public void setVivienda(Vivienda vivienda) {
+		this.vivienda = vivienda;
+	}
 
-  public Oferta() {}
+	public void setIdOferta(long idOferta) {
+		this.idOferta = idOferta;
+	}
 
-  public Oferta(String tituloOferta) {
-    this.tituloOferta = tituloOferta;
-  }
+	public void setTituloOferta(String tituloOferta) {
+		this.tituloOferta = tituloOferta;
+	}
+
+	public void setSuperficieVivienda() {
+		this.superficieVivienda = superficieVivienda();
+	}
+
+	// contructores
+
+	public Oferta() {
+	}
+
+	public Oferta(String tituloOferta, Vivienda vivienda) {
+		this.tituloOferta = tituloOferta;
+		this.superficieVivienda = superficieVivienda();
+	}
+
+	public double superficieVivienda() {
+		double retorno;
+		double superficieVivienda = getVivienda().getSuperficie();
+		String valorSuperficieIncorrecto = "el valor de la superficie de la vivienda es incorrecto.";
+		if (superficieVivienda <= 0) {
+			retorno = Double.valueOf(valorSuperficieIncorrecto);
+		} else {
+			retorno = superficieVivienda;
+		}
+		return retorno;
+	}
 
 }

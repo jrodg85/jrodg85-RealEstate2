@@ -2,37 +2,61 @@ package es.jrodg85.realestate;
 
 public class OfertaDeVenta extends Oferta implements OfertaDeVentaInterfaz {
 
-  // atributos
+	// atributos
 
-  private double precioDeVenta;
+	private double precioDeVenta;
+	private double precioDeVentaPorSuperficie;
 
-  // get
+	// get
 
-  @Override
-  public double getPrecioDeVenta() {
-    return precioDeVenta;
-  }
+	@Override
+	public double getPrecioDeVenta() {
+		return precioDeVenta;
+	}
 
-  // setter
+	@Override
+	public double getPrecioDeVentaPorSuperficie() {
+		return precioDeVentaPorSuperficie;
+	}
 
-  @Override
-  public void setPrecioDeVenta(double precioDeVenta) {
-    this.precioDeVenta = precioDeVenta;
-  }
+	// setter
 
-  // contructor
+	@Override
+	public void setPrecioDeVenta(double precioDeVenta) {
+		this.precioDeVenta = precioDeVenta;
+	}
 
-  public OfertaDeVenta() {}
+	@Override
+	public void setPrecioDeVentaPorSuperficie() {
+		this.precioDeVentaPorSuperficie = precioVentaSuperficie();
+	}
 
-  public OfertaDeVenta(String tituloOferta, double precioDeVenta) {
-    super(tituloOferta);
-    this.precioDeVenta = precioDeVenta;
-  }
+	// contructor
 
-  @Override
-  public String toString() {
-    return "Oferta De Venta [PrecioDeVenta = " + getPrecioDeVenta() + ", Titulo Oferta = "
-        + getTituloOferta() + " ]";
-  }
+	public OfertaDeVenta() {
+	}
+
+	public OfertaDeVenta(String tituloOferta, Vivienda vivienda, double precioDeVenta) {
+		super(tituloOferta, vivienda);
+		this.precioDeVenta = precioDeVenta;
+		this.precioDeVentaPorSuperficie = precioVentaSuperficie();
+	}
+
+	@Override
+	public double precioVentaSuperficie() {
+		double precioVenta = getPrecioDeVenta();
+		double superficie = getVivienda().getSuperficie();
+		double precioSuperficieVenta;
+		String valorPercioIncorrecto = "El valor del precio de alquiler es incorrecto.";
+		if (superficie <= 0) {
+			precioSuperficieVenta = superficie;
+		}
+		if (precioVenta <= 0) {
+			precioSuperficieVenta = Double.valueOf(valorPercioIncorrecto);
+		} else {
+			precioSuperficieVenta = precioVenta / superficie;
+		}
+		return precioSuperficieVenta;
+	}
 
 }

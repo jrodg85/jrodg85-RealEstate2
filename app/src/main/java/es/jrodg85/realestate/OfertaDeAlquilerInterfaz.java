@@ -2,12 +2,19 @@ package es.jrodg85.realestate;
 
 public interface OfertaDeAlquilerInterfaz {
 
-  double getPrecioAlquilerMensual();
+	double getPrecioAlquilerMensual();
 
-  int getMesesFianza();
+	int getMesesFianza();
 
-  void setPrecioAlquilerMensual(double precioAlquilerMensual);
+	double getPrecioDeAlquilerPorSuperficie();
+	// setters
 
-  void setMesesFianza(int mesesFianza);
+	void setPrecioAlquilerMensual(double precioAlquilerMensual);
+
+	void setMesesFianza(int mesesFianza);
+
+	void setPrecioDeAlquilerPorSuperficie();
+
+	double precioAlquilerSuperficie();
 
 }
