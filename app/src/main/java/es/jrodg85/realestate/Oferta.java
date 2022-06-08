@@ -50,7 +50,7 @@ public abstract class Oferta {
 	public Oferta() {
 	}
 
-	public Oferta(String tituloOferta, Vivienda vivienda) {
+	public Oferta(String tituloOferta) {
 		this.tituloOferta = tituloOferta;
 		this.superficieVivienda = superficieVivienda();
 	}
