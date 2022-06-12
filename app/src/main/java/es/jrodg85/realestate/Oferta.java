@@ -25,7 +25,7 @@ public class Oferta {
 
 	// setter
 
-	public void setIdOferta(long idOferta) {
+	public void setIdOferta(int idOferta) {
 		this.idOferta = idOferta;
 	}
 

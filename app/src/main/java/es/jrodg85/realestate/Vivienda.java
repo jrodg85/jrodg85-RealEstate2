@@ -57,7 +57,7 @@ public class Vivienda {
 
 	// setter
 
-	public void setIdVivienda(long idVivienda) {
+	public void setIdVivienda(int idVivienda) {
 		this.idVivienda = idVivienda;
 	}
 
