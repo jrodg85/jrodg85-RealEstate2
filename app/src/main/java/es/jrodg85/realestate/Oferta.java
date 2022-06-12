@@ -1,19 +1,15 @@
 package es.jrodg85.realestate;
 
-public abstract class Oferta {
+
+public class Oferta {
 
 	// atributos
 
-	private Vivienda vivienda;
 	private long idOferta;
 	private String tituloOferta;
-	private double superficieVivienda;
+	private Vivienda vivienda;
 
-	// getters
-
-	public Vivienda getVivienda() {
-		return vivienda;
-	}
+	// getter
 
 	public long getIdOferta() {
 		return idOferta;
@@ -23,15 +19,11 @@ public abstract class Oferta {
 		return tituloOferta;
 	}
 
-	public double getSuperficieVivienda() {
-		return superficieVivienda;
+	public Vivienda getVivienda() {
+		return vivienda;
 	}
 
-	// setters
-
-	public void setVivienda(Vivienda vivienda) {
-		this.vivienda = vivienda;
-	}
+	// setter
 
 	public void setIdOferta(long idOferta) {
 		this.idOferta = idOferta;
@@ -41,30 +33,15 @@ public abstract class Oferta {
 		this.tituloOferta = tituloOferta;
 	}
 
-	public void setSuperficieVivienda() {
-		this.superficieVivienda = getVivienda().getSuperficie();
+	public void setVivienda(Vivienda vivienda) {
+		this.vivienda = vivienda;
 	}
-
-	// contructores
 
 	public Oferta() {
 	}
 
 	public Oferta(String tituloOferta) {
-		this.tituloOferta = tituloOferta;
-		this.superficieVivienda = getVivienda().getSuperficie();
+		this.tituloOferta=tituloOferta;
 	}
-
-	public double superficieVivienda() {
-		double retorno;
-		double superficieVivienda = getVivienda().getSuperficie();
-		String valorSuperficieIncorrecto = "el valor de la superficie de la vivienda es incorrecto.";
-		if (superficieVivienda <= 0) {
-			retorno = Double.valueOf(valorSuperficieIncorrecto);
-		} else {
-			retorno = superficieVivienda;
-		}
-		return retorno;
-	}
-
+	
 }

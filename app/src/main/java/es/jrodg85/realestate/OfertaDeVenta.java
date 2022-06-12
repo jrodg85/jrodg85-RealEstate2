@@ -1,62 +1,30 @@
 package es.jrodg85.realestate;
 
-public class OfertaDeVenta extends Oferta implements OfertaDeVentaInterfaz {
+public class OfertaDeVenta extends Oferta{
 
-	// atributos
+	  // atributos
 
-	private double precioDeVenta;
-	private double precioDeVentaPorSuperficie;
+	  private double precioDeVenta;
 
-	// get
+	  // getter 
+	  
+	  public double getPrecioDeVenta() {
+	    return precioDeVenta;
+	  }
 
-	@Override
-	public double getPrecioDeVenta() {
-		return precioDeVenta;
-	}
+	  // setter 
 
-	@Override
-	public double getPrecioDeVentaPorSuperficie() {
-		return precioDeVentaPorSuperficie;
-	}
+	  public void setPrecioDeVenta(double precioVenta) {
+	    this.precioDeVenta = precioVenta;
+	  }
 
-	// setter
+	  // Constructores
 
-	@Override
-	public void setPrecioDeVenta(double precioDeVenta) {
-		this.precioDeVenta = precioDeVenta;
-	}
+	  public OfertaDeVenta() {}
 
-	@Override
-	public void setPrecioDeVentaPorSuperficie() {
-		this.precioDeVentaPorSuperficie = precioVentaSuperficie();
-	}
-
-	// contructor
-
-	public OfertaDeVenta() {
-	}
-
-	public OfertaDeVenta(String tituloOferta, double precioDeVenta) {
-		super(tituloOferta);
-		this.precioDeVenta = precioDeVenta;
-		this.precioDeVentaPorSuperficie = precioVentaSuperficie();
-	}
-
-	@Override
-	public double precioVentaSuperficie() {
-		double precioVenta = getPrecioDeVenta();
-		double superficie = getVivienda().getSuperficie();
-		double precioSuperficieVenta;
-		String valorPercioIncorrecto = "El valor del precio de alquiler es incorrecto.";
-		if (superficie <= 0) {
-			precioSuperficieVenta = superficie;
-		}
-		if (precioVenta <= 0) {
-			precioSuperficieVenta = Double.valueOf(valorPercioIncorrecto);
-		} else {
-			precioSuperficieVenta = precioVenta / superficie;
-		}
-		return precioSuperficieVenta;
-	}
+	  public OfertaDeVenta(String titulo, double precioDeVenta) {
+	    super(titulo);
+	    this.precioDeVenta=precioDeVenta;
+	  }
 
 }
