@@ -7,7 +7,7 @@ public class Vivienda {
 
 	// atributos
 
-	private long idVivienda;
+	private int idVivienda;
 	private String propietario;
 	private String provincia;
 	private String ciudad;

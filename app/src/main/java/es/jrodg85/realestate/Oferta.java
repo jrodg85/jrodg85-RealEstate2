@@ -5,7 +5,7 @@ public class Oferta {
 
 	// atributos
 
-	private long idOferta;
+	private int idOferta;
 	private String tituloOferta;
 	private Vivienda vivienda;
 
