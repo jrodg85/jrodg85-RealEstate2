@@ -40,8 +40,9 @@ public class Oferta {
 	public Oferta() {
 	}
 
-	public Oferta(String tituloOferta) {
+	public Oferta(String tituloOferta, Vivienda vivienda) {
 		this.tituloOferta=tituloOferta;
+		this.vivienda=vivienda;
 	}
 	
 }

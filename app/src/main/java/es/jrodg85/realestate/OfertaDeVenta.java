@@ -1,30 +1,31 @@
 package es.jrodg85.realestate;
 
-public class OfertaDeVenta extends Oferta{
+public class OfertaDeVenta extends Oferta {
 
-	  // atributos
+	// atributos
 
-	  private double precioDeVenta;
+	private double precioDeVenta;
 
-	  // getter 
-	  
-	  public double getPrecioDeVenta() {
-	    return precioDeVenta;
-	  }
+	// getter
 
-	  // setter 
+	public double getPrecioDeVenta() {
+		return precioDeVenta;
+	}
 
-	  public void setPrecioDeVenta(double precioVenta) {
-	    this.precioDeVenta = precioVenta;
-	  }
+	// setter
 
-	  // Constructores
+	public void setPrecioDeVenta(double precioVenta) {
+		this.precioDeVenta = precioVenta;
+	}
 
-	  public OfertaDeVenta() {}
+	// Constructores
 
-	  public OfertaDeVenta(String titulo, double precioDeVenta) {
-	    super(titulo);
-	    this.precioDeVenta=precioDeVenta;
-	  }
+	public OfertaDeVenta() {
+	}
+
+	public OfertaDeVenta(String titulo, Vivienda vivienda, double precioDeVenta) {
+		super(titulo, vivienda);
+		this.precioDeVenta = precioDeVenta;
+	}
 
 }

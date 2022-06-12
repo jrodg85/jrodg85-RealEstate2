@@ -29,8 +29,8 @@ public class OfertaDeAlquiler extends Oferta{
 
 	  public OfertaDeAlquiler() {}
 
-	  public OfertaDeAlquiler(String tituloOferta, double precioAlquilerMensual, int mesesFianza) {
-	    super(tituloOferta);
+	  public OfertaDeAlquiler(String tituloOferta, Vivienda vivienda, double precioAlquilerMensual, int mesesFianza) {
+	    super(tituloOferta, vivienda);
 	    this.precioAlquilerMensual = precioAlquilerMensual;
 	    this.mesesFianza = mesesFianza;
 	  }
