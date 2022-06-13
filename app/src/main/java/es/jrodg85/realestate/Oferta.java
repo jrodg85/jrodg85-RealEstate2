@@ -5,13 +5,13 @@ public class Oferta {
 
 	// atributos
 
-	private int idOferta;
+	private Integer idOferta;
 	private String tituloOferta;
 	private Vivienda vivienda;
 
 	// getter
 
-	public int getIdOferta() {
+	public Integer getIdOferta() {
 		return idOferta;
 	}
 
@@ -25,7 +25,7 @@ public class Oferta {
 
 	// setter
 
-	public void setIdOferta(int idOferta) {
+	public void setIdOferta(Integer idOferta) {
 		this.idOferta = idOferta;
 	}
 

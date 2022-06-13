@@ -7,7 +7,7 @@ public class Vivienda {
 
 	// atributos
 
-	private int idVivienda;
+	private Integer idVivienda;
 	private String propietario;
 	private String provincia;
 	private String ciudad;
@@ -19,7 +19,7 @@ public class Vivienda {
 
 	// getter
 
-	public int getIdVivienda() {
+	public Integer getIdVivienda() {
 		return idVivienda;
 	}
 
@@ -57,7 +57,7 @@ public class Vivienda {
 
 	// setter
 
-	public void setIdVivienda(int idVivienda) {
+	public void setIdVivienda(Integer idVivienda) {
 		this.idVivienda = idVivienda;
 	}
 
