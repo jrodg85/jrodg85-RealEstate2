@@ -11,7 +11,7 @@ public class Oferta {
 
 	// getter
 
-	public long getIdOferta() {
+	public int getIdOferta() {
 		return idOferta;
 	}
 

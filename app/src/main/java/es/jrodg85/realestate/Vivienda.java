@@ -19,7 +19,7 @@ public class Vivienda {
 
 	// getter
 
-	public long getIdVivienda() {
+	public int getIdVivienda() {
 		return idVivienda;
 	}
 
