@@ -96,8 +96,10 @@ public class Vivienda {
 	// relacion en ambos sentidos, cerrando el circulo.
 
 	public void addOferta(Oferta oferta) {
-		getOfertasVivienda().add(oferta);
-		oferta.setVivienda(this);
+		this.getOfertasVivienda().add(oferta);
+		if (oferta.getVivienda() !=this) {
+			oferta.setVivienda(this);
+		}
 
 	}
 

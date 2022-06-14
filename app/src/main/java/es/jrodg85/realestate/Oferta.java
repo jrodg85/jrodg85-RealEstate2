@@ -35,6 +35,9 @@ public class Oferta {
 
 	public void setVivienda(Vivienda vivienda) {
 		this.vivienda = vivienda;
+		if (!vivienda.getOfertasVivienda().contains(this)) {
+			vivienda.addOferta(this);
+		}
 	}
 
 	public Oferta() {
